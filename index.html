@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toko Buah Segar</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <a href="#" class="logo">🍉 BuahSegar</a>
+            <a href="#produk">Produk</a>
+            <a href="#pesan">Pesan Buah</a>
+        </nav>
+
+        <div class="hero">
+            <p class="tagline">SEGAR • SEHAT • BERKUALITAS</p>
+            <h1>Buah Segar untuk<br>Kesehatan Anda</h1>
+            <p>
+                Pilih buah favoritmu dan nikmati kesegaran
+                buah setiap hari.
+            </p>
+            <a href="#produk" class="btn-utama">Lihat Produk</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="produk" class="section">
+            <div class="section-heading">
+                <p class="tagline">PILIHAN PRODUK</p>
+                <h2>Daftar Produk</h2>
+                <p>Data produk diambil langsung dari DummyJSON API.</p>
+            </div>
+
+            <p id="status-produk" class="status" role="status"
+               aria-live="polite">
+                Memuat data produk...
+            </p>
+
+            <div id="daftar-produk" class="produk-grid"></div>
+        </section>
+
+        <section id="pesan" class="section form-section">
+            <div class="section-heading">
+                <p class="tagline">PEMESANAN</p>
+                <h2>Pesan Buah Favoritmu</h2>
+                <p>Isi formulir berikut untuk membuat pesanan.</p>
+            </div>
+
+            <form id="form-pemesanan" class="form-card">
+                <div class="form-group">
+                    <label for="nama">Nama lengkap</label>
+                    <input
+                        type="text"
+                        id="nama"
+                        placeholder="Masukkan nama lengkap"
+                        required
+                        minlength="3"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="buah">Pilih buah</label>
+                    <select id="buah" required>
+                        <option value="">-- Pilih buah --</option>
+                        <option value="Apel">Apel</option>
+                        <option value="Jeruk">Jeruk</option>
+                        <option value="Pisang">Pisang</option>
+                        <option value="Mangga">Mangga</option>
+                        <option value="Anggur">Anggur</option>
+                        <option value="Semangka">Semangka</option>
+                        <option value="Buah lainnya">Buah lainnya</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="jumlah">Jumlah pesanan (kg)</label>
+                    <input
+                        type="number"
+                        id="jumlah"
+                        placeholder="Contoh: 2"
+                        min="1"
+                        max="100"
+                        step="1"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="alamat">Alamat pengiriman</label>
+                    <textarea
+                        id="alamat"
+                        rows="3"
+                        placeholder="Masukkan alamat lengkap"
+                        required
+                        minlength="10"
+                    ></textarea>
+                </div>
+
+                <button type="submit" class="btn-utama btn-full">
+                    Buat Pesanan
+                </button>
+
+                <p id="pesan-form" role="status"
+                   aria-live="polite"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 BuahSegar | Toko Buah Pilihan Anda 🍊</p>
+    </footer>
+</body>
+</html>
